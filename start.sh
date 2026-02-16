@@ -1,5 +1,5 @@
 #!/bin/bash
-_NAME=desktop
+_NAME=xfce
 _UID=$(id -u)
 _GID=$(id -g)
 _ARG1=1
@@ -25,4 +25,4 @@ docker run -d \
 	--volume "./share:/home/user/share" \
 	--volume "./opt:/opt" \
 	--hostname "$_FULLNAME" --name "$_FULLNAME" \
-	chunying/desktop
+	chunying/xfce
