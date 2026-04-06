@@ -1,5 +1,5 @@
 #!/bin/bash
-_NAME=desktop
+_NAME=xfce
 _UID=$(id -u)
 _GID=$(id -g)
 _ARG1=1
@@ -18,6 +18,7 @@ docker run -d \
 	-p "127.0.0.1:$_RDPP:3389" \
 	-p "127.0.0.1:$_VNCP:5910" \
 	--cap-add=SYS_ADMIN --cap-add=SETUID --cap-add=SETGID \
+	--cap-add=NET_ADMIN --device /dev/net/tun \
 	--security-opt seccomp=unconfined \
 	--security-opt apparmor=unconfined \
 	--security-opt label=disable \
@@ -25,4 +26,4 @@ docker run -d \
 	--volume "./share:/home/user/share" \
 	--volume "./opt:/opt" \
 	--hostname "$_FULLNAME" --name "$_FULLNAME" \
-	chunying/desktop
+	chunying/xfce
