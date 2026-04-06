@@ -28,7 +28,7 @@ RUN useradd -u $USER_UID -g $USER_GID -G sudo -m -s /bin/bash -o user
 RUN cp /etc/skel/.[a-z]* /home/user/
 RUN echo "user:password" | chpasswd
 RUN mkdir -p /home/user/.config/tigervnc/
-RUN echo "xfce" | vncpasswd -f > /home/user/.config/tigervnc/passwd
+RUN echo "desktop" | vncpasswd -f > /home/user/.config/tigervnc/passwd
 COPY scripts/conf/dot.xsession /home/user/.config/tigervnc/xstartup
 COPY scripts/conf/dot.vnc.config /home/user/.config/tigervnc/config
 RUN chmod 0600 /home/user/.config/tigervnc/passwd

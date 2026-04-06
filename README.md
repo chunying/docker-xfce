@@ -7,4 +7,4 @@
   
 - Connect to your instance using a remote desktop client
 
-- Default login password is 'xfce' (no username is required)
+- Default login password is 'desktop' (no username is required)
