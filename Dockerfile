@@ -6,7 +6,7 @@ ENV USER_GID=$_GID
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# install base system
+# install packages
 RUN mkdir /scripts
 
 COPY scripts/pkgs-base.sh /scripts/pkgs-base.sh

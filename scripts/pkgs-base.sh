@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt install -y tini sudo vim tmux htop wget curl locales \
+apt install -y tini sudo vim tmux htop wget curl locales procps net-tools iputils-ping \
 	build-essential python3-pip python3-virtualenv \
 	xfce4 xfce4-goodies xrdp tigervnc-standalone-server \
 	xdg-desktop-portal xdg-desktop-portal-gtk dbus-x11 gvfs gvfs-backends \
